@@ -1,12 +1,13 @@
 import { ConnectionOptions } from 'typeorm';
+import { DATABASE, DATABASE_PASSORD, DATABASE_USER } from './config';
 
 const config: ConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
-  username: 'firstpro',
-  password: '3301',
-  database: 'firstpro',
+  username: DATABASE_USER,
+  password: DATABASE_PASSORD,
+  database: DATABASE,
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: false,
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],

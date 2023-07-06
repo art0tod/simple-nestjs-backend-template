@@ -20,7 +20,6 @@ export class UserService {
     const errorResponse = {
       errors: {},
     };
-
     const userByEmail = await this.userRepository.findOne({
       email: createUserDto.email,
     });
@@ -31,16 +30,16 @@ export class UserService {
     if (userByEmail) {
       errorResponse.errors['email'] = 'has already been taken';
     }
+
     if (userByUsername) {
       errorResponse.errors['username'] = 'has already been taken';
     }
-
     if (userByEmail || userByUsername) {
       throw new HttpException(errorResponse, HttpStatus.UNPROCESSABLE_ENTITY);
     }
-
     const newUser = new UserEntity();
     Object.assign(newUser, createUserDto);
+    console.log('newUser', newUser);
     return await this.userRepository.save(newUser);
   }
 

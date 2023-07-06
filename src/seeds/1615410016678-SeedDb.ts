@@ -6,7 +6,7 @@ export class SeedDb1615410016678 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(
-      `INSERT INTO tags (name) VALUES ('dragons'), ('keys'), ('nest')`,
+      `INSERT INTO tags (name) VALUES ('red'), ('green'), ('blue')`,
     );
 
     // password is test
