@@ -1,4 +1,4 @@
 export const JWT_SECRET = 'super-secret';
-export const DATABASE = 'firstpro';
-export const DATABASE_USER = 'firstpro';
-export const DATABASE_PASSORD = '3301';
+export const DATABASE = 'name';
+export const DATABASE_USER = 'username';
+export const DATABASE_PASSORD = '0000';
